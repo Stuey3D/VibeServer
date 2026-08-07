@@ -4,31 +4,31 @@ Hash: SHA512
 Architectures: arm64
 Codename: stable
 Components: main
-Date: Fri, 07 Aug 2026 21:17:46 +0000
+Date: Fri, 07 Aug 2026 22:41:35 +0000
 Description: VibeServer — turn an SDR into a network receiver
 Label: VibeSDR
 Origin: VibeSDR
 Suite: stable
 MD5Sum:
- 17c52424437a29728f5371909d02023c              202 Release
- d04a7e39e04c955eb14ac1a8ce1c4e7f              726 main/binary-arm64/Packages
- 18eed111828a348b20694277af8ea331              509 main/binary-arm64/Packages.gz
+ 91fe4042e16087c7cfd761564e2e337f              202 Release
+ dfcff7480b9118442198099ec6e190de              726 main/binary-arm64/Packages
+ bcec6374d34ebb6be4f66bdcf62d1065              510 main/binary-arm64/Packages.gz
 SHA1:
- 99d3cbe6f0415e98fd78387f5e5259f720b623d2              202 Release
- f21b8f08608530cf16c93210eaa3b11852fb7c5b              726 main/binary-arm64/Packages
- 16da323475aae741a90dc680446deda23638cc3b              509 main/binary-arm64/Packages.gz
+ 112250b80b3009bf5714668eeca3e91ba0f5a921              202 Release
+ 7af0842f81137d2064aea86506336c8ad3aa2df6              726 main/binary-arm64/Packages
+ 2dedb97b18a81aa71a28dfa131774d02e313e872              510 main/binary-arm64/Packages.gz
 SHA256:
- 2ea9206f93059cc714f844198c65ad4d8c2cb72fc50793df8da1b06d93af16c3              202 Release
- 62a9df52008772b44dc790d7a4c3a1c2555a49fe61799fc550594fd94bee57aa              726 main/binary-arm64/Packages
- d11eea3da92c5b0d4f6d22c804da671b40a9a6233450997ccb74c499caf5334f              509 main/binary-arm64/Packages.gz
+ 1cc143b7a7e2eaee86b0785e4c89d87e688c40f2cc06e1f324fd410ae2658d1b              202 Release
+ 8997bd250daecc61dd0d4db34f7a9b5d4c78c696a763a9d8c5762d935915f1c3              726 main/binary-arm64/Packages
+ 3a56a706bc0b4af2cc40eadd7f481df1d3a8b4520136bc50f9f2542b198b11f0              510 main/binary-arm64/Packages.gz
 SHA512:
- 203928f5ee050d0d259b8ae55f7c91280bbd2af448fbbc56700277a8cb67c597c5bc105aaf776ef14faf16c5066af60dc7d3392f62897d267af356afc56fcb80              202 Release
- ee64f4cec89f5aab65733066aafdb261bc972ddcfb5c440371463cb743dad3aea14918dbfff3b385f9f89d5b866163c06a58cbfa289acee0a990a4583ea916d5              726 main/binary-arm64/Packages
- c0349f6cc2b96ef359a2286b728fc0427f0d51b8d2d3f96c10f25bfb0638639781981170c222a9d9c2c3cb3983384d03e086b64d46c0069be3e23ef494d15391              509 main/binary-arm64/Packages.gz
+ 1aea52e00369ec56207c91dc4ff5486e731cec5c050d19cd3cc0518135e8ea13aa9d0f81e6a46932e9cf7b6f4fb328ee53ff0a86535474614be9fb05aae02210              202 Release
+ 37d70cf811d292114e285c0bf3dc5677140fdb3b8b27f632918ab8749513b7d9fde0f79ed7ff501088d281ce78f307f2aac30880e3e9f9da8a86cee048aa908c              726 main/binary-arm64/Packages
+ 778348bc43e5774d4dcdbe919b290eac71b90755230ca423b35885954d74eef0d8930b393326a768e20afd4f50ccf59f9580875ed8b96b916cd37dc4dac5d8d0              510 main/binary-arm64/Packages.gz
 -----BEGIN PGP SIGNATURE-----
 
-iIsEARYKADMWIQQrVJYnB9gRmSnh+yv8OECW2J8K5wUCanZLehUccGFja2FnZXNA
-dmliZXNkci5uZXQACgkQ/DhAltifCudRawEA+xGCQvMLpJx39dl7MqtD895a2FMP
-hNWYsq9t5Tl6vAIBALvf7TBoyg+g46SKB39sfbhbhU/oOD3M7Bfr1oERkO0P
-=Kn23
+iIsEARYKADMWIQQrVJYnB9gRmSnh+yv8OECW2J8K5wUCanZfHxUccGFja2FnZXNA
+dmliZXNkci5uZXQACgkQ/DhAltifCuetJgEA9q+vLF0mKpHOTpsr0mUpvRVINUQt
+y63lQd6r5VkPswcA/jtzc+NC9rxDZQVNZek/3ff+eva28tq6tOjt+g4BwxUM
+=jTOc
 -----END PGP SIGNATURE-----
