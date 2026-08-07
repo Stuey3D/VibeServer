@@ -19,12 +19,18 @@ build anything** — apt pulls in everything VibeServer needs.
 curl -fsSL https://apt.vibesdr.net/KEY.gpg \
   | sudo gpg --dearmor -o /usr/share/keyrings/vibesdr.gpg
 
-echo "deb [signed-by=/usr/share/keyrings/vibesdr.gpg] https://apt.vibesdr.net stable main" \
+echo "deb [arch=arm64 signed-by=/usr/share/keyrings/vibesdr.gpg] https://apt.vibesdr.net stable main" \
   | sudo tee /etc/apt/sources.list.d/vibesdr.list
 
 sudo apt update
 sudo apt install vibeserver
 ```
+
+> **`arch=arm64` is deliberate.** 64-bit Raspberry Pi OS enables multi-arch, so apt asks every
+> repository for `armhf` as well — and ours is arm64 only, which produces a harmless but alarming
+> `Skipping acquire of configured file 'main/binary-armhf/Packages'` on every update. Naming the
+> architecture stops apt asking for one we do not publish.
+
 
 The first two commands tell your machine to trust the packages and where to find them — you only
 ever do that once. From then on VibeServer updates alongside everything else on the machine.
