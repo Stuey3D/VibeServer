@@ -35,6 +35,19 @@ sudo apt install vibeserver
 The first two commands tell your machine to trust the packages and where to find them — you only
 ever do that once. From then on VibeServer updates alongside everything else on the machine.
 
+### Which systems this runs on
+
+**Debian 13 (trixie) or newer, or Ubuntu 24.04 or newer** — including the current Raspberry Pi OS.
+
+`apt` will tell you if your system is too old, naming `libc6` or `libstdc++6`. **If it does, do not
+upgrade those libraries and do not upgrade your OS to get around it.** They sit underneath
+everything else installed on the machine, and dragging them forward on a distribution that was not
+built for them breaks other software — it has already cost one person a working OpenWebRX. Nothing
+about VibeServer is worth that. Tell us instead: the fix belongs in our package, not on your
+machine.
+
+Older systems (Debian 12 bookworm, Ubuntu 22.04) are simply not built for yet.
+
 > **Use a 64-bit OS.** The DSP has a fast path that only exists on 64-bit ARM. A 32-bit system
 > silently loses all of it and runs roughly **13× slower** on the same hardware.
 
