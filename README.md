@@ -8,6 +8,12 @@ This repository is the **APT repository and download host**. The source lives in
 
 **Current release: 3.0** &nbsp;·&nbsp; [apt.vibesdr.net](https://apt.vibesdr.net)
 
+### 📻 **[→ See one running: demo.vibesdr.net](https://demo.vibesdr.net)**
+
+A live VibeServer in England with three receivers behind one address — an RTL-SDR, an SDRplay
+RSP1B and an Airspy HF+. Open it in a browser and tune one. That is this software, unmodified,
+on a Raspberry Pi on a home broadband line, so please be gentle with it.
+
 > **New in 3.0:** several radios on one machine behind **one address and one port**, per-radio
 > frequency **allow / block lists** with an ITU-region-aware band plan, an admin overview of the
 > **whole machine** rather than one radio, admin sign-in **from the opening screen**, a safe
