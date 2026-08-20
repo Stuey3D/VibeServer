@@ -1,7 +1,8 @@
 <!doctype html>
-<!-- Template for the VibeServer landing page. publish-apt.sh substitutes amd64 3.2.0-1 __ARCHVERSIONS__middot; arm64 3.2.0-1 and
-     sudo apt install ./vibeserver_3.2.0-1_amd64.deb
-sudo apt install ./vibeserver_3.2.0-1_arm64.deb (both derived from what is actually in the pool, per architecture)
+<!-- Template for the VibeServer landing page. publish-apt.sh fills in the two placeholders
+     below (both derived from what is actually in the pool, per architecture).
+     ★ Do NOT name them in this comment: they would be substituted here too, which is exactly
+       what happened the first time and put an install command inside an HTML comment.
      and writes the result to the repository root. Edit it HERE, not there — the copy in the
      artefact repo is generated and will be overwritten on the next publish. -->
 <html lang="en">
@@ -33,7 +34,7 @@ sudo apt install ./vibeserver_3.2.0-1_arm64.deb (both derived from what is actua
 <main>
   <h1>VibeServer</h1>
   <p>Turn an SDR into a network receiver for the VibeSDR apps and any browser.<br>
-     <span class="ver">Current package: amd64 3.2.0-1 __ARCHVERSIONS__middot; arm64 3.2.0-1</span></p>
+     <span class="ver">Current package: amd64 3.2.0-1, arm64 3.2.0-1</span></p>
 
   <h2>Debian / Ubuntu / Raspberry Pi OS &mdash; ARM or Intel/AMD</h2>
   <p>Tested on Debian 13 (trixie) and Raspberry Pi OS on a Pi 500, and on Ubuntu 24.04 on an
