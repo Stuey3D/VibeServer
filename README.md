@@ -20,6 +20,11 @@ on a Raspberry Pi on a home broadband line, so please be gentle with it.
 > **RTL serial-number editor** in the browser, **releasing a radio when nobody is listening** so
 > another program can borrow it, and support for running **behind a reverse proxy**.
 
+> **New in 4.1:** **HackRF One support — Experimental.** It works, but nobody here owns one to
+> listen to it, so it is not advertised and the gain is entirely manual. If you have one, please
+> [tell us how it runs](https://github.com/Stuey3D/VibeSDR/issues) — see
+> [If you have a HackRF One](#if-you-have-a-hackrf-one-experimental) below.
+
 ---
 
 ## Install on a Raspberry Pi (or any 64-bit ARM Debian / Ubuntu)
@@ -227,7 +232,7 @@ set is remembered, and updates never change a gain you have set yourself.
 ## If you have an SDRplay RSP
 
 `apt` cannot install SDRplay's driver, and that is not an oversight: SDRplay distribute it under
-their own licence and it is not ours to redistribute. **RTL-SDR and Airspy HF+ need nothing
+their own licence and it is not ours to redistribute. **RTL-SDR, Airspy HF+ and HackRF need nothing
 extra.**
 
 On a headless Pi there is no browser, so fetch it from the command line:
@@ -258,6 +263,37 @@ You can install the driver before or after VibeServer. If you add an RSP later, 
 
 Without it, VibeServer runs perfectly and reports no radio, which reads as broken hardware rather
 than a missing driver — so the message it prints names the download.
+
+---
+
+## If you have a HackRF One *(Experimental)*
+
+**A HackRF works, and it is the one radio nobody here owns.** The driver was written against
+libhackrf and the published hardware description; it has never been heard by the person who wrote
+it. That is why it says Experimental, why it is not advertised anywhere else, and why anything that
+goes wrong with it is worth telling us about — you will be the first to know.
+
+Nothing extra to install: `apt` pulls libhackrf in with VibeServer. Plug it in, open the setup page,
+pick it from the radio list, and it appears like any other receiver. It covers **1 MHz – 6 GHz** —
+there is no medium wave or long wave on this radio without an upconverter.
+
+Two things are different from every other radio here:
+
+- **You set the gain yourself. There are three stages and no AGC.** A HackRF has no automatic gain
+  mode at all, so the receiver page gives you the RF amp, the LNA (0–40 dB) and the VGA (0–62 dB)
+  as separate controls. Raise the **LNA first** — gain taken there costs the least noise — and use
+  the VGA to top up. VibeAGC does not run on a HackRF: it has been tuned by ear against three
+  radios that behave nothing like an 8-bit front end, and it is not driving one unheard.
+- **Everything starts at zero, and the RF amp starts off.** That is deliberate. The HackRF's RF
+  amp is the part that most commonly dies: the front end is largely unprotected, maximum safe input
+  is **−5 dBm**, and static while swapping an aerial can kill it. A dead one is cruel to diagnose —
+  it acts as an attenuator, so switching the amp **on** makes the band go **quieter**. Coming up
+  from nothing costs you a quiet waterfall you turn up; coming up hot on an unknown aerial can cost
+  you the radio.
+
+**The RF amp and the bias-T are owner-only**, like the bias-T everywhere else in VibeServer: if you
+have set an admin password, a listener cannot switch either of them on. On a shared receiver that is
+the point — nobody else should be able to put +14 dB or 3.3 V into your aerial.
 
 ---
 
