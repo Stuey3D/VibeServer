@@ -4,39 +4,39 @@ Hash: SHA256
 Architectures: amd64 arm64
 Codename: stable
 Components: main
-Date: Sun, 13 Sep 2026 15:48:01 +0000
+Date: Sun, 13 Sep 2026 15:48:39 +0000
 Description: VibeServer — turn an SDR into a network receiver
 Label: VibeSDR
 Origin: VibeSDR
 Suite: stable
 MD5Sum:
- edb71b619ca5e53995ee60d39febb185              208 Release
- fe1147960673d38fa1458ab32e730be0              750 main/binary-amd64/Packages
- 1f86a290fce9ee5f07cfe3b3a10e5aa8              525 main/binary-amd64/Packages.gz
+ cb303efc818260df14f7ad4f74dad030              208 Release
+ 2699ca086ce7c72c0b1e23ed4e7aa3b7              750 main/binary-amd64/Packages
+ b7fabd4d065023ea743ef59783c3b347              525 main/binary-amd64/Packages.gz
  dfb9c8b7d83cd618bc56272d0ffe2f04              750 main/binary-arm64/Packages
  c3a566d38e2805bc47dc8e45279b9c18              525 main/binary-arm64/Packages.gz
 SHA1:
- 978ac6c34d0c247ae5a5ad0d46eca3d4f79430d3              208 Release
- fbc507fadf9f7abd7d951e5c6a76868732edc6a9              750 main/binary-amd64/Packages
- ae575ab664b310e4bdf6b9270ccaa510eefdf7de              525 main/binary-amd64/Packages.gz
+ 8e73d415cf093f076960a70edd33e93a6431e304              208 Release
+ a3392ebe083500ac4d8b09061e85074d9397ce29              750 main/binary-amd64/Packages
+ 14b1a45706ba0e68ad7cb429c9f6108aa1569082              525 main/binary-amd64/Packages.gz
  94767d3596d04d6beae9db4788806410c2fd2cf1              750 main/binary-arm64/Packages
  8b38b48eac0542beb043c24588704835370812b5              525 main/binary-arm64/Packages.gz
 SHA256:
- d898110efc4e98c2bce75918c095ae75aafe2150ed134e13d3428908e01db998              208 Release
- 1ab94c2690c586fa4524546bb78e8edf7085f6dfb33e88b993ba05abf53f363f              750 main/binary-amd64/Packages
- a2968d079d423195b8a319df98160d773ef27730f28a14d2aa1b1bef3bf52b19              525 main/binary-amd64/Packages.gz
+ 21321714893e76bcc1e59238c2d475708159f24ad066a7359251198f0214ece2              208 Release
+ c2eff280ebad64ed8ee13af31cc7ccd69854d38286cb082ecd10e13735d1b32a              750 main/binary-amd64/Packages
+ 25574a82cd4d9e5178d64b817ad722850931c495e780974efcd643d3d2bda223              525 main/binary-amd64/Packages.gz
  de887ecfaaacbe3057c36aa55c74e96374570277f41aede5cb48580e62a29ade              750 main/binary-arm64/Packages
  b1879029f6ffb15ed9e554952121218279fc6e623308f757d8518233f952867b              525 main/binary-arm64/Packages.gz
 SHA512:
- f4478ca4bc1d3f6cdf03b56c75f79a17be258e646e99f169dcbb0c63f19a8e51774e75b726169f607ac4e7fa8d5750e795c2bb38566c740fa3ea9578ef6cdd47              208 Release
- 5cc9fbd5662901d0f1c777df65957cf0170eb4fecf88ba8ac313d056bf7707e5ffc70418659ede6e4323e6270c4a7e9cafbcc2b14574e4a4bc47e1daf72c2fb7              750 main/binary-amd64/Packages
- d9bf2aabbead838e6885fe46b29de0c1a03f7a2574058970157b458a02aea70b053a2588eb447d7a17e1b7b70a0c6ff8f36d9f60e037788c798f8f49fb5493ab              525 main/binary-amd64/Packages.gz
+ fa49253853529430cd8ef0857f4d1c21b4ee9ac624c290c76b44c0c8f2f9cf99e7cebddd05ce20d282c5707123a6e2f52eef0dcbe53d4d76c4908b152a35d438              208 Release
+ 1536275f0a51c885dd264c3088f37669514e7a45dd884d290afc5ba52864528694c14f0a5207ac96c0bb4c79c2e76967e76a39ada869abfd096c71c31a022a5d              750 main/binary-amd64/Packages
+ ac8b895df6d2635b2b8218d1954fcfb26cbc3a5ea2210e01fb4886f7853dc9d7c23d6312f3a31a1ca5b562d0a0ee2c97d0a5a155d6757e0a46d619242d2859b6              525 main/binary-amd64/Packages.gz
  4a9b64e5efc01bdc605bb3200321c9c53e4ce02164836e51f6fd01ec1a033eb97e3edbc62fb0498318661ce4fad0e1535d1e63a3dd1906e3dcf290c002e32c53              750 main/binary-arm64/Packages
  2766e263f29be3c7068b08d042d3af0f7a42a6b08d6c704bb8b5fe8de70c04ead1a9b1cd0a152defa5863ae3b76abaac8467a7c74b816f9c185ceae3cd3cd0ef              525 main/binary-arm64/Packages.gz
 -----BEGIN PGP SIGNATURE-----
 
-iIsEARYIADMWIQQrVJYnB9gRmSnh+yv8OECW2J8K5wUCaqbFsRUccGFja2FnZXNA
-dmliZXNkci5uZXQACgkQ/DhAltifCud+hgEAo6+6yw6tGBY6Vmk+rXhrBv9QPqpK
-aQMtKJfdg2b3GpsA/0vs6pFdZqbwnB/tTTaarivArMGbS4YhpUtzEarVlUUN
-=92Js
+iIsEARYIADMWIQQrVJYnB9gRmSnh+yv8OECW2J8K5wUCaqbF1xUccGFja2FnZXNA
+dmliZXNkci5uZXQACgkQ/DhAltifCucZiwD/Sq0JbbaKHl51+DFEYkK8KooAxrZN
+lyzjXQgZ/xkbopIA/2LkzRYN55o5Qg269weRnhR3ISBpGj6wlap0/HZA5woP
+=sFvu
 -----END PGP SIGNATURE-----
