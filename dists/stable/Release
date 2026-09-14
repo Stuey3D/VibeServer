@@ -1,32 +1,32 @@
 Architectures: amd64 arm64
 Codename: stable
 Components: main
-Date: Mon, 14 Sep 2026 21:34:29 +0000
+Date: Mon, 14 Sep 2026 21:46:39 +0000
 Description: VibeServer — turn an SDR into a network receiver
 Label: VibeSDR
 Origin: VibeSDR
 Suite: stable
 MD5Sum:
- 113a44fd6e2c27e85f86ad42b1bbe690              208 Release
- 94f20750dec65bd2f439402bbea1028f              750 main/binary-amd64/Packages
- eb1b85eb4d3ff1b69cbf89a2b01b434e              524 main/binary-amd64/Packages.gz
+ e718232a128bf12070b8426d4ca7cd3a              208 Release
+ 36a44b862923420bdc25a8f8ec5bf6f3              750 main/binary-amd64/Packages
+ 4b5cac2bacc936d28c48daddde9ed724              526 main/binary-amd64/Packages.gz
  92eff6b542a730acaecda42dec1a990d              750 main/binary-arm64/Packages
  0e7974263bb890939fb1cb103380579f              523 main/binary-arm64/Packages.gz
 SHA1:
- 73420d5effdb3113209cc208dff81ff4457d1592              208 Release
- 8d96692db9445fe897c1cd6d962a6bab33264f07              750 main/binary-amd64/Packages
- 5f44f6386dc8e5a6feae9411d608fdd5493a5c1d              524 main/binary-amd64/Packages.gz
+ f7ed0863aa4f8cff0189e400a9a9d3a56e105f15              208 Release
+ 69f47614b90dbdf4d6e130ba8538e84778924570              750 main/binary-amd64/Packages
+ 9fbcf1f3992cd5bc026089fd9ffc9800278e760b              526 main/binary-amd64/Packages.gz
  b2554ebdc4d646f9b46e1864fc22ffd01a93566c              750 main/binary-arm64/Packages
  f08ffbe291e7fc5fbb4c7fc75bcd41f2dc908503              523 main/binary-arm64/Packages.gz
 SHA256:
- 8c90ba9aa352dd3ea9b0651ed930f0a096ca8bbd3c392c4c7a2f88a3368a74e7              208 Release
- d2e7ab02ba3aa49b87b28adbf7fc5e1585dc2d6d3c01fc42a42af907ad367f80              750 main/binary-amd64/Packages
- 6c1e217145dd7d38f14bd8c8acd11e9fdd9937c542694e4ca52371feed3fbc31              524 main/binary-amd64/Packages.gz
+ 78be3956b2a67a619f11858ad62e257685900dfa815a55154e1867b6c47f4643              208 Release
+ 176802da272df960e85387f820310541454f5c8e751c80d04cd2fe99813f41a8              750 main/binary-amd64/Packages
+ 7338db55fc6cb6216b58d087ce158e0ad17bc857970707562ae6d5f15a0f3c1b              526 main/binary-amd64/Packages.gz
  6254dd5a817962cef27fb01f1680c8fd61a627e62c8441b87c89d86aea1316fc              750 main/binary-arm64/Packages
  7320215ea72f3488eeb0b74320b70224ded1520b3c75abc0fd4c6fe7761f04cd              523 main/binary-arm64/Packages.gz
 SHA512:
- 38ae6d007908d2e13a32c7936e5325c555800341d38883084c41a23fb44f5662677715f22aa522a20cb3b7d6b29d055be0fe8d709ef694549f836e64de86dc46              208 Release
- 525621a1b06b72cea1c8a024af7a95e18f23b1df2b6c35b3c299820a1021b08256c67cd2c834988b4adc9c5f2fedea1e3c73c556ab3e3e558740954cf444bb48              750 main/binary-amd64/Packages
- 0e0c08c95f347a50fc5edf6fd85867a8b75943a130db3ba2792fec6aef8d5659de1f5dc65ef0e39ec9ace8063397dab11cae902cadc713bbe634c0448c046293              524 main/binary-amd64/Packages.gz
+ 920ced4a2371760f7a2c83cb8c2d128f35d3ee292c4e1f396a8089015856131d59ddfecab0aa66235a38f33a3a06c0a9c70be19309574c5140f6ca3d05058b8c              208 Release
+ cc89858fdac57f0cdffa4a29b7f698bfd16438476702743ea737b437393afbf1e20c485df7cfda7febbb81d5ed6fb145e0db0029170c3914bda50e05fa433875              750 main/binary-amd64/Packages
+ 7a85a43628708642613af57d6569b869e3724fedd32daa92f836a94f6a032215f142c6ed1d321b025243af56964005612e5bcfa01f566b70f46de0dda876b58f              526 main/binary-amd64/Packages.gz
  60a12ca11812c6a97c50abff5448fc76bc88770fc44073d6f21801adcf19dec389864ba07308b57a3cacd62143fa120a161fe51d064184c850239000ed995d71              750 main/binary-arm64/Packages
  3f03ecc83f8460ad171b2138b9c6e0f30e2e6ad1ced197383ae35c937ef5d5b31581bd4bc6394e0bee7b4e947cb977eb661d2a7410d0d2a8f1e9011de1d0318d              523 main/binary-arm64/Packages.gz
