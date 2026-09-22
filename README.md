@@ -27,7 +27,7 @@ on a Raspberry Pi on a home broadband line, so please be gentle with it.
 
 ---
 
-## Install on a Raspberry Pi (or any 64-bit ARM Debian / Ubuntu)
+## Install on a Raspberry Pi, or any Debian / Ubuntu machine (arm64, amd64 or 32-bit ARM)
 
 Paste the whole block. **You do not need to install any libraries yourself and you do not need to
 build anything** — apt pulls in everything VibeServer needs.
@@ -36,17 +36,15 @@ build anything** — apt pulls in everything VibeServer needs.
 curl -fsSL https://apt.vibesdr.net/KEY.gpg \
   | sudo gpg --dearmor -o /usr/share/keyrings/vibesdr.gpg
 
-echo "deb [arch=arm64 signed-by=/usr/share/keyrings/vibesdr.gpg] https://apt.vibesdr.net stable main" \
+echo "deb [arch=$(dpkg --print-architecture) signed-by=/usr/share/keyrings/vibesdr.gpg] https://apt.vibesdr.net stable main" \
   | sudo tee /etc/apt/sources.list.d/vibesdr.list
 
 sudo apt update
 sudo apt install vibeserver
 ```
 
-> **`arch=arm64` is deliberate.** 64-bit Raspberry Pi OS enables multi-arch, so apt asks every
-> repository for `armhf` as well — and ours is arm64 only, which produces a harmless but alarming
-> `Skipping acquire of configured file 'main/binary-armhf/Packages'` on every update. Naming the
-> architecture stops apt asking for one we do not publish.
+> **The `arch=` is this machine's own**, filled in by `dpkg --print-architecture`, so apt only asks
+> for the one package it needs. arm64, amd64 and armhf (32-bit ARM) are all published.
 
 
 The first two commands tell your machine to trust the packages and where to find them — you only
@@ -65,8 +63,10 @@ machine.
 
 Older systems (Debian 12 bookworm, Ubuntu 22.04) are simply not built for yet.
 
-> **Use a 64-bit OS.** The DSP has a fast path that only exists on 64-bit ARM. A 32-bit system
-> silently loses all of it and runs roughly **13× slower** on the same hardware.
+> **Minimum confirmed hardware: Raspberry Pi 2** (quad-core ARMv7, 0.9 GHz). 256 MB of RAM will run
+> it; 512 MB is recommended. 32-bit ARM needs NEON, so ARMv6 boards (Pi Zero, Zero W, Pi 1) are not
+> supported yet — the package refuses to install there. Older or lower-end hardware will most likely
+> run with restrictions.
 
 ### On a Raspberry Pi 5, the install reboots your USB power budget
 
