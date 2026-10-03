@@ -1,0 +1,221 @@
+<!doctype html>
+<!-- Template for the VibeServer landing page. publish-apt.sh fills in the two placeholders
+     below (both derived from what is actually in the pool, per architecture).
+     ★ Do NOT name them in this comment: they would be substituted here too, which is exactly
+       what happened the first time and put an install command inside an HTML comment.
+     and writes the result to the repository root. Edit it HERE, not there — the copy in the
+     artefact repo is generated and will be overwritten on the next publish. -->
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>VibeServer — downloads</title>
+<style>
+  :root { --bg:#080601; --fg:#ffb833; --dim:rgba(255,184,51,0.62); --line:rgba(255,160,0,0.22); }
+  * { box-sizing: border-box; }
+  body { margin:0; background:var(--bg); color:var(--fg); line-height:1.6;
+         font-family: ui-monospace,"SF Mono",Menlo,Consolas,monospace; }
+  main { max-width: 760px; margin: 0 auto; padding: 2.5rem 1.2rem 4rem; }
+  h1 { letter-spacing: 4px; font-size: 1.6rem; margin: 0 0 .2rem; }
+  h2 { font-size: 1rem; letter-spacing: 2px; margin: 2.4rem 0 .6rem;
+       border-bottom: 1px solid var(--line); padding-bottom: .35rem; }
+  h3 { font-size: .92rem; letter-spacing: 1px; margin: 1.8rem 0 .4rem; color: #ffe566; }
+  p, li { color: var(--dim); }
+  a { color: #ffe566; }
+  pre { background: rgba(255,160,0,0.06); border: 1px solid var(--line); border-radius: 8px;
+        padding: .9rem 1rem; overflow-x: auto; color: var(--fg); font-size: .86rem; }
+  code { color: #ffe566; }
+  /* ★ COPY BUTTONS. Added at runtime (see the script at the end) so every <pre> gets one and a
+     block added later needs no extra markup — this file is a TEMPLATE the publish script fills in,
+     and hand-decorating each block would be six places to forget. */
+  .codewrap { position: relative; }
+  .codewrap pre { padding-right: 4.2rem; }
+  .copy { position: absolute; top: .5rem; right: .5rem;
+          background: rgba(255,160,0,0.10); color: var(--fg);
+          border: 1px solid var(--line); border-radius: 6px;
+          font: inherit; font-size: .72rem; letter-spacing: 1px;
+          padding: .25rem .5rem; cursor: pointer; opacity: .75;
+          display: inline-flex; align-items: center; gap: .35rem; }
+  .copy:hover, .copy:focus { opacity: 1; background: rgba(255,160,0,0.18); }
+  .copy svg { width: 12px; height: 12px; fill: none; stroke: currentColor; stroke-width: 1.8; }
+  .copy.done { color: #7dff9a; border-color: rgba(125,255,154,0.5); opacity: 1; }
+  .ver { color: var(--dim); font-size: .85rem; letter-spacing: 1px; }
+  footer { margin-top: 3rem; border-top: 1px solid var(--line); padding-top: 1rem;
+           font-size: .8rem; color: var(--dim); }
+</style>
+</head>
+<body>
+<main>
+  <h1>VibeServer</h1>
+  <p>Turn an SDR into a network receiver for the VibeSDR apps and any browser.<br>
+     <span class="ver">Current package: amd64 11.0.0~rc2-1, arm64 11.0.0~rc2-1, armhf 11.0.0~rc2-1</span></p>
+
+  <h2>Debian / Ubuntu / Raspberry Pi OS &mdash; ARM or Intel/AMD</h2>
+  <p>Tested on Debian 13 (trixie) and Raspberry Pi OS on a Pi 500, and on Ubuntu 24.04 on an
+     Intel i5. Anything <strong>arm64</strong> or <strong>amd64</strong> running Debian or Ubuntu
+     should work &mdash; the install below is the same command on either.</p>
+  <p><strong>One package, every architecture</strong> &mdash; apt picks arm64, amd64 or armhf
+     (32-bit ARM) to suit the machine. Minimum confirmed hardware: <strong>Raspberry Pi 2</strong>
+     (quad-core ARMv7, 0.9&nbsp;GHz); 512&nbsp;MB of RAM recommended. 32-bit ARM needs NEON, so ARMv6
+     boards (Pi Zero, Zero W, Pi 1) are not supported yet.</p>
+  <p><strong>On Intel/AMD it runs the scalar path</strong>, which costs about
+     <strong>12.8% of one core</strong> for a stereo FM listener at 1.92&nbsp;MSPS (measured on an
+     i5-11300H). That is roughly twice what NEON costs on an Apple M4, and it does not matter:
+     extra listeners share one channelizer and add about <strong>0.02%</strong> each, so a single
+     modern core carries a full receiver comfortably.</p>
+
+  <h3>1. Install</h3>
+  <p>Copy and paste the whole block &mdash; it is <strong>the same block on ARM and on
+     Intel/AMD</strong>, because it asks your machine which one it is.
+     <strong>Nothing else needs installing</strong> &mdash; apt pulls in every library VibeServer
+     needs.</p>
+<pre>curl -fsSL https://apt.vibesdr.net/KEY.gpg \
+  | sudo gpg --dearmor -o /usr/share/keyrings/vibesdr.gpg
+echo "deb [arch=$(dpkg --print-architecture) signed-by=/usr/share/keyrings/vibesdr.gpg] https://apt.vibesdr.net stable main" \
+  | sudo tee /etc/apt/sources.list.d/vibesdr.list
+sudo apt update
+sudo apt install vibeserver</pre>
+  <p><strong>Log out and back in now.</strong> The install adds you to the <code>plugdev</code>
+     group so the radio can be opened without root, and group membership only takes effect on a
+     new login. Skip this and the next step will report no radio.</p>
+
+  <h3>2. Set it up</h3>
+<pre>vibeserver</pre>
+  <p>That opens a short text wizard: give the receiver a name, say roughly where it is, pick the
+     radio, and set an admin password. When you finish, <strong>it enables and starts the service
+     for you</strong> &mdash; there is no separate command to run.</p>
+
+  <h3>3. Open it in a browser</h3>
+<pre>http://&lt;the address the wizard printed&gt;:48000</pre>
+  <p>That is the receiver itself &mdash; waterfall, audio, decoders &mdash; and the same page the
+     VibeSDR apps talk to. On the same network, <code>http://vibeserver.local:48000</code> usually
+     works too.</p>
+
+  <h3>&#9733; The waterfall will look quiet at first, and that is deliberate</h3>
+  <p>A new install starts the radio at <strong>minimum gain, in manual mode</strong>. That is a
+     choice, not a fault: an unknown antenna on an unknown band can overload a front end the
+     moment it is switched on, and a receiver that starts safe and sounds quiet is far easier to
+     recover from than one that starts hot and distorts everything.</p>
+  <p>Open the menu and bring the gain up until the noise floor lifts and signals appear. Whatever
+     you set is remembered, and upgrades never change a gain you have touched.</p>
+
+  <h3>If you have an SDRplay RSP</h3>
+  <p><code>apt install</code> cannot fetch the SDRplay driver and this is not an oversight:
+     SDRplay distribute it under their own licence and we are not permitted to redistribute it.
+     RTL-SDR and Airspy HF+ need nothing extra.</p>
+<pre>curl -fL -o SDRplay_RSP_API-Linux-3.15.run \
+  "https://sdrplay.com/download/hardware-api-linux/?wpdmdl=1906"
+chmod +x SDRplay_RSP_API-Linux-3.15.run
+sudo ./SDRplay_RSP_API-Linux-3.15.run
+sudo reboot
+# once it is back:
+systemctl status sdrplay        # should be active (running)</pre>
+  <p>The installer is interactive &mdash; it pages a licence (space to scroll), then asks twice
+     for <code>y</code>. One file covers every architecture: it carries <code>armhf</code>,
+     <code>amd64</code> and <code>arm64</code>, so the Pi and a desktop take the same download.
+     <strong>Reboot when it finishes</strong>: the installer asks for it, and a replug is not
+     enough.</p>
+  <p class="fine">SDRplay moved their downloads in 2026 and the old
+     <code>sdrplay.com/software/&hellip;.run</code> links now 404. The address above is their
+     current one and works under <code>curl</code> on a headless box &mdash; no browser needed.
+     It is a download-manager id, so expect it to change when they publish the next version;
+     if it ever fails, the page to look at is
+     <a href="https://www.sdrplay.com/api/">sdrplay.com/api</a>.</p>
+  <p>Install it whenever you like &mdash; before or after VibeServer. If you add an RSP later,
+     <code>sudo systemctl restart vibeserver</code> is enough; the driver is loaded at runtime.</p>
+
+  <h3>Updating</h3>
+<pre>sudo apt update &amp;&amp; sudo apt upgrade</pre>
+  <p>Your settings survive and the service restarts on the new binary. The admin page has an
+     <strong>Install updates</strong> button that does the same thing from a browser.</p>
+
+  <h3>Prefer a single file?</h3>
+  <p>Install the <code>.deb</code> with <code>apt install ./&hellip;</code> &mdash; with the
+     <code>./</code> &mdash; so apt still resolves the dependencies. Never
+     <code>dpkg -i</code>: it does not resolve them, and leaves you part-installed.</p>
+  <p>Take the line for your architecture &mdash; <code>dpkg --print-architecture</code> tells you
+     which, if you are not sure.</p>
+<pre>sudo apt install ./vibeserver_11.0.0~rc2-1_amd64.deb
+sudo apt install ./vibeserver_11.0.0~rc2-1_arm64.deb
+sudo apt install ./vibeserver_11.0.0~rc2-1_armhf.deb</pre>
+
+  <h2>macOS</h2>
+  <p>A signed, notarised build — download, open, and it runs without a Gatekeeper argument.</p>
+  <p><a href="https://github.com/Stuey3D/VibeServer/releases/latest">Latest release →</a></p>
+
+  <h2>Source</h2>
+  <p>VibeServer is built from the VibeSDR tree — the same DSP engine, decoders and protocol the
+     apps use, which is why a fix in one reaches all of them.</p>
+  <p><a href="https://github.com/Stuey3D/VibeSDR">github.com/Stuey3D/VibeSDR</a> · GPL-3.0</p>
+
+  <footer>
+    Packages are signed with <code>ed25519/FC384096D89F0AE7</code>
+    (VibeSDR Package Signing &lt;packages@vibesdr.net&gt;).<br>
+    This repository holds build artefacts only; issues and source live in the
+    <a href="https://github.com/Stuey3D/VibeSDR">main repository</a>.
+  </footer>
+</main>
+<script>
+/* ★★ ONE BUTTON PER <pre>, BUILT HERE RATHER THAN IN THE MARKUP. This page is a template whose
+   command blocks are filled in by the publish script; adding the control at runtime means a new
+   block is covered automatically and there is no per-block markup to keep in step.
+   ★ The button is OUTSIDE the <pre> (in a positioned wrapper) on purpose: <pre> scrolls
+     horizontally, and a control inside it would slide away from a long command line.
+   ★ navigator.clipboard needs a secure context. This page is served over https, but the
+     execCommand fallback costs three lines and covers a plain-http mirror or an old browser —
+     a copy button that silently does nothing is worse than none. */
+(function () {
+  var ICON = '<svg viewBox="0 0 24 24" aria-hidden="true">'
+           + '<rect x="9" y="9" width="12" height="12" rx="2"></rect>'
+           + '<path d="M5 15V5a2 2 0 0 1 2-2h10"></path></svg>';
+  function copyText(text) {
+    if (navigator.clipboard && navigator.clipboard.writeText) {
+      return navigator.clipboard.writeText(text);
+    }
+    return new Promise(function (resolve, reject) {
+      var ta = document.createElement('textarea');
+      ta.value = text;
+      ta.setAttribute('readonly', '');
+      ta.style.position = 'fixed';
+      ta.style.opacity = '0';
+      document.body.appendChild(ta);
+      ta.select();
+      var ok = false;
+      try { ok = document.execCommand('copy'); } catch (e) { ok = false; }
+      document.body.removeChild(ta);
+      ok ? resolve() : reject();
+    });
+  }
+  document.querySelectorAll('pre').forEach(function (pre) {
+    var wrap = document.createElement('div');
+    wrap.className = 'codewrap';
+    pre.parentNode.insertBefore(wrap, pre);
+    wrap.appendChild(pre);
+
+    var btn = document.createElement('button');
+    btn.className = 'copy';
+    btn.type = 'button';
+    btn.setAttribute('aria-label', 'Copy to clipboard');
+    btn.innerHTML = ICON + '<span>COPY</span>';
+    btn.addEventListener('click', function () {
+      /* ★ textContent, not innerText: the whole block exactly as written, comments and all —
+         the blocks are meant to be pasted whole. The button lives outside the <pre>, so nothing
+         of its own can end up in the clipboard. */
+      copyText(pre.textContent.replace(/\s+$/, '') + '\n').then(function () {
+        btn.classList.add('done');
+        btn.querySelector('span').textContent = 'COPIED';
+        setTimeout(function () {
+          btn.classList.remove('done');
+          btn.querySelector('span').textContent = 'COPY';
+        }, 1600);
+      }).catch(function () {
+        btn.querySelector('span').textContent = 'SELECT IT';
+        setTimeout(function () { btn.querySelector('span').textContent = 'COPY'; }, 1600);
+      });
+    });
+    wrap.appendChild(btn);
+  });
+})();
+</script>
+</body>
+</html>
