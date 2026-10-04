@@ -4,47 +4,47 @@ Hash: SHA256
 Architectures: amd64 arm64 armhf
 Codename: stable
 Components: main
-Date: Sun, 04 Oct 2026 08:58:16 +0000
+Date: Sun, 04 Oct 2026 09:41:46 +0000
 Description: VibeServer — turn an SDR into a network receiver
 Label: VibeSDR
 Origin: VibeSDR
 Suite: stable
 MD5Sum:
- 1f02664eb192df60195990084a696ddf              214 Release
+ 122a92b2fffdd39a1e8943f9bf97fe4e              214 Release
  abbbf319ceddf376fc819d0c2d949a15              787 main/binary-amd64/Packages
  3c5f13a6f153446115fc131643f2371e              541 main/binary-amd64/Packages.gz
- 4f2a20a1fe29781fcb2a5c0e6563d486              787 main/binary-arm64/Packages
- 63a032b3ccf74ee15bca81f02a4e08ea              541 main/binary-arm64/Packages.gz
+ aab107853029621d0786c1e4f9e8082a              787 main/binary-arm64/Packages
+ c9a852e9cdaca1574bb9083b29f0ae5a              542 main/binary-arm64/Packages.gz
  e74f6d8b1daa2a9932b2cb3f8570212b              831 main/binary-armhf/Packages
  cd6a96c07a2ab61f2040ab96c5a940d4              559 main/binary-armhf/Packages.gz
 SHA1:
- b99190cb55ce218b54a102b147ce661fdb9b6aff              214 Release
+ 81142db33da22b705bdcfa2c5652082de7c9b554              214 Release
  01cc5e7af9999096a4d3f9c58ac2264f11fc6b18              787 main/binary-amd64/Packages
  2e1a8a3287af4bbb8d783a557411af649f0bdaf9              541 main/binary-amd64/Packages.gz
- 3714e05a57aba4bc7a38cb51356b4fa247d3b5a2              787 main/binary-arm64/Packages
- ababc014bf83acfda2d013cc4802d4f6d8205c9e              541 main/binary-arm64/Packages.gz
+ 67a582097e9ae41c98bc3e1dc2130efd43a94872              787 main/binary-arm64/Packages
+ e722552b02e95d4de6269be5578f4298413a8b09              542 main/binary-arm64/Packages.gz
  edab0e5a6ae334d4efc0bf61b078669afd6d2d7f              831 main/binary-armhf/Packages
  e122621a393c7ccee8be31d6318e6252a8bb9cc5              559 main/binary-armhf/Packages.gz
 SHA256:
- 8d44a84085ee961122007e889e5654236685933a35a597069957aa6153daa6c0              214 Release
+ 39484c2eaa736622cfd004bda63962ad2896ef49a8695e9594c6945acf05cd55              214 Release
  984514d60b9f330edf163db31e1dc28ecc2f96e52553fbc9cbb2b336e124457e              787 main/binary-amd64/Packages
  2713d60a64a0d1b4c1371d4a69844a3907120d84d1090905ce2c0d7d52370830              541 main/binary-amd64/Packages.gz
- b4a3918f27dcf1a29dc4b26732b1b461c3b47f6fbabcccbf36af3846916b8096              787 main/binary-arm64/Packages
- 21fb9d476d91afbbf5ae956d9907df226908314890703228ce66bbcd76cc9564              541 main/binary-arm64/Packages.gz
+ 237ebb939f65ed791309fcf758898078aa4a439412329bc72b7e1d3d1bbb3fab              787 main/binary-arm64/Packages
+ 472933cfe6176e4800e75c7fe5aff3732f961c725a174c1b615e8ac4135a624b              542 main/binary-arm64/Packages.gz
  cc4624ff9cc74ee22defcaa21289adc962a5ecd7cc471b3741569b8ae6371c17              831 main/binary-armhf/Packages
  31d0f43ccbef0e2b05e948e40300727e41a295e9f264ac4112e7b1183c6fae4b              559 main/binary-armhf/Packages.gz
 SHA512:
- 7498881bce060d4412a5d1d4d405f93ecf33a48cc76d046329aeecf3cff83b9275cc52df8702e4319c507d0516e227efb2edc3da7923deaa95c15ae39913b923              214 Release
+ faeeb40b5d8be349fea6ccccb63b5f31de8aee36177eaa428f21d8e50899b83621c84eb88291bc972b125e8e0d596c8aa92145e5a3522fb9024c0ac2e195175c              214 Release
  0c50d3fabed9f1fc24fbcc64d08bf9aa447b4c50332c76f6ad3d63c6a0e62a8e22b16fd7752c845d56e854facaac11176d5b867f3f75ddfb6e3ecf50c49ed082              787 main/binary-amd64/Packages
  9468eb9eaac4991755f621c679e5a717883dbf17045fd022e9c8d645a6080ae27b81efd929367a9b9e1efd6ea8164270089e7b0f76ab07beb3c274ab06bec546              541 main/binary-amd64/Packages.gz
- ea8b9811f2554d49d8b3127e4b0118f7b59d8857f743461737c25bd4a80e535a5efdb5fc4fcf4ca6accdc6f4f0515df3e64d70ae290c5cb34ea79fb0badd9e0e              787 main/binary-arm64/Packages
- cbfb1ef8bd4f36df3de09b3431852ec04d7953251b39265a70172a92346398438ce174f1c8be6539c839d0693fb6cbb27af01979caea190cf559077b17c3bd19              541 main/binary-arm64/Packages.gz
+ bc53606ff159e5930b2b9a8edaed936901667c69689b2c6606f2ec8c32e5b99cdb920d03769878f72daae8025a63d8a685de4369e2f3b79701557d1b403da231              787 main/binary-arm64/Packages
+ 5a3bd562afd0e1aeb1c532437d8d971602a554ab4f90f7b44c7e26bd26d4038312e293865b923f9c7d5aed3f179af172fa27a686b71ec4b7d71ad8f69306de5a              542 main/binary-arm64/Packages.gz
  76fb283e977caf380cdc20196cb625f23782adda5f4eadd4aab0bd1693ce14290df8c5277e64124841b47a25a7bcf0b04190f0730a8d95f41e72da31c0f7a586              831 main/binary-armhf/Packages
  ec980839bf41ed96b6dd7cbc441edf3868f21442ee7b7570b0008a5c7e39a1b1e6eddbaa220990fa9786e075e540ed6d48d369edeffa4b4823c5b94485f8d812              559 main/binary-armhf/Packages.gz
 -----BEGIN PGP SIGNATURE-----
 
-iIsEARYIADMWIQQrVJYnB9gRmSnh+yv8OECW2J8K5wUCasIVKRUccGFja2FnZXNA
-dmliZXNkci5uZXQACgkQ/DhAltifCud+MgEAvXoC2XrWuK4PaJACpJq5wtOYloIy
-VifSj70191jocSMBAKtjzLaRq7CzJxP1QI+Lnpeq8LRoTcDo0OOTACQZDKkD
-=oOAb
+iIsEARYIADMWIQQrVJYnB9gRmSnh+yv8OECW2J8K5wUCasIfWhUccGFja2FnZXNA
+dmliZXNkci5uZXQACgkQ/DhAltifCucDigEAz4sioulCyoWsRQXJ4Q25ob6yX4+E
+Jzp/z2stX00zeI8A/1G+yXWJrqR9UR1gNF0gm0Lrt0wp9YBMvbqtkaF0bxUD
+=A9ge
 -----END PGP SIGNATURE-----
