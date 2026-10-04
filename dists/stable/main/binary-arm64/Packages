@@ -1,15 +1,15 @@
 Package: vibeserver
-Version: 11.0.0~rc7-2
+Version: 11.0.0~rc8-1
 Architecture: arm64
 Maintainer: https://github.com/Stuey3D/VibeSDR/issues
 Installed-Size: 91131
 Depends: adduser, curl, gzip, libc6 (>= 2.34), libgcc-s1 (>= 4.0), libhackrf0 (>= 2022.09.1), libncursesw6 (>= 6), libopus0 (>= 1.1), libstdc++6 (>= 12), libtinfo6 (>= 6), libusb-1.0-0 (>= 2:1.0.23~)
 Recommends: ffmpeg, vibeserver-mapdata-detail
-Filename: pool/main/v/vibeserver/vibeserver_11.0.0~rc7-2_arm64.deb
-Size: 52143562
-MD5sum: 21592592ced5a4a4c05f97c679eb5147
-SHA1: 7e336fe62815cdcf94e0c97445bdab13c4f39bd6
-SHA256: 3626c1bc3f12d23aa881a744c1e12c9c3d8fbf5895161d02697b2d73104374ed
+Filename: pool/main/v/vibeserver/vibeserver_11.0.0~rc8-1_arm64.deb
+Size: 52143896
+MD5sum: eb7e0419da8ef1fea5ec28a8ca0b3401
+SHA1: fbfb4e80dd9a078457b862a1c98336e0caf59d32
+SHA256: 4d5d326f24a4c3f7552891102ad2704693b3c271bf1e2d5b783acfbb78bdf1b0
 Section: hamradio
 Priority: optional
 Homepage: https://vibesdr.net
