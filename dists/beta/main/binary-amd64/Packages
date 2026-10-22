@@ -1,0 +1,17 @@
+Package: vibeserver
+Version: 12.0.0~beta1-1
+Architecture: amd64
+Maintainer: https://github.com/Stuey3D/VibeSDR/issues
+Installed-Size: 101175
+Depends: adduser, curl, gzip, libc6 (>= 2.35)
+Recommends: ffmpeg, vibeserver-mapdata-detail
+Filename: pool/beta/v/vibeserver/vibeserver_12.0.0~beta1-1_amd64.deb
+Size: 56506758
+MD5sum: 59886a88f4745391d2ac7f658c457fb1
+SHA1: df8f3b4939cdaa21f787ad7db3bb34844d13cd40
+SHA256: 867b9414a94361b0d1c6897ee26cd17e1876d3af45d5756fd8142aeac07476f4
+Section: hamradio
+Priority: optional
+Homepage: https://vibesdr.net
+Description: VibeServer — turn an SDR into a network receiver for VibeSDR and any browser
+
