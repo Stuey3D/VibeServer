@@ -1,15 +1,15 @@
 Package: vibeserver
-Version: 12.0.0~beta51-1
+Version: 12.0.0~beta52-1
 Architecture: armhf
 Maintainer: https://github.com/Stuey3D/VibeSDR/issues
-Installed-Size: 129923
+Installed-Size: 130290
 Depends: adduser, curl, gzip, libc6 (>= 2.35)
 Recommends: vibeserver-mapdata-detail
-Filename: pool/beta/v/vibeserver/vibeserver_12.0.0~beta51-1_armhf.deb
-Size: 71928712
-MD5sum: 00cffcc2cfba190ec14aa8d24847e2c5
-SHA1: 7e77393e7aec8ee28b0e1b5f32c678d455a4d566
-SHA256: 5446ffa2fb213088c9726b1b90b3c72befce2c96cf7a25388df2e0ef550666ca
+Filename: pool/beta/v/vibeserver/vibeserver_12.0.0~beta52-1_armhf.deb
+Size: 72119936
+MD5sum: 29839d5d0eff2de9f4f8a4d0aafc160d
+SHA1: 41528a0186c1ce83412dcdba93cb62982a19e589
+SHA256: 6a59b8ad30024139f37bf9122353b1472362a9a6a1f2375939dfbe1840d01a7f
 Section: hamradio
 Priority: optional
 Homepage: https://vibesdr.net
